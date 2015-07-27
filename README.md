@@ -1,4 +1,4 @@
-# fw-rum-game template
+# fw-rum template
 
 A Leiningen template to get started with figwheel and rum when building a small (game) app.
 
