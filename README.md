@@ -4,7 +4,7 @@ A Leiningen template to get started with figwheel and rum when building a small 
 
 ## Usage
 
-    lein new fw-rum-game my-new-game
+    lein new fw-rum new-project-name
 
 ## License
 
