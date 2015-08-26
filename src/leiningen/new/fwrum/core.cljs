@@ -48,8 +48,7 @@
        [:tr [:td "Michelle"]
         [:td "42"]]
        [:tr [:td "Frank"]
-        [:td "46"]]]]]]
-   ])
+        [:td "46"]]]]]])
 
 ;;
 ;; Put the app/game in here
