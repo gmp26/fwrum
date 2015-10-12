@@ -1,5 +1,5 @@
 (ns ^:figwheel-always {{name}}.core
-    (:require [rum :as r]
+    (:require [rum.core :as rum]
               [cljs.reader :as reader]
               [clojure.set :refer (intersection)]
               [cljsjs.react]
@@ -20,7 +20,7 @@
 (defn el [id] (.getElementById js/document id))
 
 ;;;
-;; Sample jQuery usage: 
+;; Sample jQuery usage:
 ;;  Attach the jQuery plugin only after React has mounted the selected element and jQuery has loaded.
 ;;;
 (defn home-did-mount
@@ -33,7 +33,7 @@
 ;; data-table mixin - adds jQuery DataTable code on jQuery ready
 (def data-table {:did-mount home-did-mount})
 
-(r/defc home < r/reactive data-table []
+(rum/defc home < rum/reactive data-table []
   [:div.row
     [:div.col-md-6
      [:table#example.table.table-striped.table-bordered {:cell-spacing "0" :width "100%"}
@@ -53,15 +53,15 @@
 ;;
 ;; Put the app/game in here
 ;;
-(r/defc game-container < r/reactive [] 
+(rum/defc game-container < rum/reactive []
   [:div#box
-   [:h1 (:title (r/react game))]
+   [:h1 (:title (rum/react game))]
    (home)])
 
 ;;
 ;; mount main component on html game element
 ;;
-(r/mount (game-container) (el "game"))
+(rum/mount (game-container) (el "game"))
 
 ;;
 ;; optionally do something on game reload
